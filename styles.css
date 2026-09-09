@@ -604,3 +604,35 @@ main > .promise-bar ~ section{margin-top:0}
   .hero-title-diya{right:9px;width:26px;height:15px}
   .gifted-media--product{height:208px}
 }
+
+/* Final compactness and uncropped product pass. */
+.diwali-jewels{padding-block:34px}
+.diwali-jewel-stage{gap:11px;padding:12px;border-radius:24px}
+.diwali-jewel-card{min-height:332px}
+.diwali-jewel-media{min-height:216px;padding:14px}
+.diwali-jewel-media img{height:208px;object-fit:contain}
+.diwali-jewel-copy{min-height:105px;padding:0 15px 15px}
+.gold-product-visual{height:160px;padding:10px 12px;overflow:hidden}
+.gold-product-visual img,.gifted-media--product img{width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain;object-position:center}
+.gifted-media--product{height:214px;padding:12px;overflow:hidden}
+.gifted-media--product img{display:block}
+
+@media(max-width:820px){
+  .diwali-jewels{padding-block:26px}
+  .diwali-jewel-stage{padding:9px;gap:9px}
+  .diwali-jewel-card{min-height:324px}
+  .diwali-jewel-media{min-height:205px;padding:11px}
+  .diwali-jewel-media img{height:198px}
+  .diwali-jewel-copy{min-height:100px;padding:0 13px 13px}
+  .gold-product-visual{height:146px;padding:9px 10px}
+  .gifted-media--product{height:202px;padding:10px}
+}
+
+@media(max-width:520px){
+  .diwali-jewels{padding-block:22px}
+  .diwali-jewel-card{min-height:314px}
+  .diwali-jewel-media{min-height:196px}
+  .diwali-jewel-media img{height:190px}
+  .diwali-jewel-copy{min-height:96px;padding-bottom:11px}
+  .gifted-media--product{height:190px}
+}
