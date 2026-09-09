@@ -136,3 +136,29 @@ footer{background:#fff;padding:58px 0 20px;border-top:1px solid var(--line)}.foo
   .festival-product-card .category-copy span{display:block;font-size:10px}
   .festival-product-card .category-copy h3{font-size:15px}
 }
+
+
+/* Final hero lockup: supplied video fills the stage; mobile stage is exactly 40% of the viewport */
+.hero.hero-video{border:0;outline:0;background:#16020f}
+.hero.hero-video .hero-video-media{object-fit:cover;object-position:center;width:100%;height:100%;border:0}
+.hero-title-lockup{position:absolute;z-index:16;left:clamp(20px,5vw,76px);bottom:clamp(22px,4vw,56px);pointer-events:none}
+.hero-title-lockup h1{position:relative;display:flex;align-items:center;gap:15px;margin:0;padding:13px 22px 15px;border:1px solid rgba(247,205,116,.68);border-radius:999px;background:linear-gradient(110deg,rgba(72,2,46,.88),rgba(127,5,92,.65));box-shadow:0 18px 45px rgba(35,0,22,.38),inset 0 1px 0 rgba(255,255,255,.23);backdrop-filter:blur(11px);-webkit-backdrop-filter:blur(11px);color:#fff;overflow:hidden}
+.hero-title-lockup h1::before{content:"";position:absolute;inset:-70% -25%;background:linear-gradient(105deg,transparent 42%,rgba(255,235,178,.28) 49%,transparent 56%);transform:translateX(-65%);animation:heroTitleShine 4.8s ease-in-out infinite}
+.hero-title-giva{position:relative;font-family:"Lato",Arial,sans-serif;font-size:clamp(17px,1.7vw,24px);font-weight:600;letter-spacing:.18em;line-height:1}
+.hero-title-separator{position:relative;width:1px;height:clamp(27px,3vw,43px);background:linear-gradient(transparent,#f2cc79,transparent)}
+.hero-title-diwali{position:relative;font-family:Georgia,"Times New Roman",serif;font-size:clamp(31px,4vw,58px);font-weight:400;font-style:italic;line-height:.92;letter-spacing:-.04em;text-shadow:0 3px 16px rgba(31,0,18,.45)}
+@keyframes heroTitleShine{0%,56%{transform:translateX(-72%)}82%,100%{transform:translateX(72%)}}
+@media(max-width:820px){
+  .hero.hero-video{height:40svh;min-height:40svh;max-height:40svh;aspect-ratio:auto}
+  .hero.hero-video .hero-video-media{object-fit:cover;object-position:center}
+  .hero-title-lockup{left:14px;right:14px;bottom:14px;display:flex;justify-content:center}
+  .hero-title-lockup h1{max-width:100%;gap:10px;padding:10px 16px 12px}
+  .hero-title-giva{font-size:14px;letter-spacing:.15em}
+  .hero-title-separator{height:28px}
+  .hero-title-diwali{font-size:clamp(26px,8.5vw,38px)}
+}
+@media(max-width:380px){
+  .hero-title-lockup h1{gap:8px;padding-inline:13px}
+  .hero-title-giva{font-size:12px}
+  .hero-title-diwali{font-size:25px}
+}
