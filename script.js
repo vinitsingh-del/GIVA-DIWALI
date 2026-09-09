@@ -135,36 +135,8 @@
 })();
 
 
-// Smooth, silent hero playback and cursor firecracker tracer.
+// Cursor firecracker tracer.
 (() => {
-  const video = document.getElementById('heroVideo');
-  if (video) {
-    const start = () => {
-      video.muted = true;
-      video.defaultMuted = true;
-      video.volume = 0;
-      video.autoplay = true;
-      video.loop = true;
-      video.playsInline = true;
-      const attempt = video.play();
-      if (attempt) attempt.catch(() => {});
-    };
-    const keepPlaying = () => {
-      if (!document.hidden && video.paused && !video.ended) start();
-    };
-    video.addEventListener('loadeddata', start, { once: true });
-    video.addEventListener('canplay', start, { once: true });
-    video.addEventListener('pause', () => window.setTimeout(keepPlaying, 0));
-    video.addEventListener('ended', start);
-    window.addEventListener('pageshow', start);
-    document.addEventListener('visibilitychange', () => {
-      if (!document.hidden) start();
-    });
-    requestAnimationFrame(start);
-    window.setTimeout(keepPlaying, 300);
-    window.setInterval(keepPlaying, 700);
-  }
-
   if (!window.matchMedia('(pointer:fine)').matches || window.matchMedia('(prefers-reduced-motion:reduce)').matches) return;
   const canvas = document.createElement('canvas');
   canvas.className = 'cursor-firework-canvas';
