@@ -46,9 +46,10 @@
 
   <main>
     <section class="hero hero-video" aria-label="GIVA Diwali campaign video">
-      <video class="hero-video-media" autoplay muted loop playsinline preload="auto">
+      <video id="heroVideo" class="hero-video-media" autoplay muted loop playsinline preload="auto" disablepictureinpicture controlslist="nodownload noplaybackrate">
         <source src="assets/giva-hero-diwali.mp4" type="video/mp4">
       </video>
+      <div class="hero-video-heading"><h1>GIVA Wali Diwali</h1></div>
       <canvas id="festiveCanvas" aria-hidden="true"></canvas>
       <div class="hero-light-wash" aria-hidden="true"></div>
       <div class="light-string light-string-top" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
@@ -63,18 +64,26 @@
       </div>
     </section>
 
-    <section class="section" id="diwali-shop">
+    <section class="section festival-edit" id="diwali-shop">
       <div class="shell">
-        <div class="section-heading centered reveal"><span>THE FESTIVE EDIT</span><h2>Shop Diwali & Dhanteras</h2><p>Find something meaningful for every celebration, every bond and every new beginning.</p></div>
-        <div class="category-mosaic reveal">
-          <a class="category-card category-card--feature" href="https://www.giva.co/collections/silver-earrings" target="_blank" rel="noreferrer"><img src="assets/2_c871e4c9-7f34-4960-8784-f1d986f5047f.webp" alt="GIVA earrings festive collection"><div class="category-copy"><small>Festive favourites</small><h3>Earrings</h3><span>Explore <b>→</b></span></div></a>
-          <a class="category-card" href="https://www.giva.co/collections/rings" target="_blank" rel="noreferrer"><img src="assets/7_1_1_e1e5681f-e10d-4eec-94d7-e5a054a8a453.webp" alt="GIVA rings festive collection"><div class="category-copy"><h3>Rings</h3><span>Explore →</span></div></a>
-          <a class="category-card" href="https://www.giva.co/collections/silver-bracelets" target="_blank" rel="noreferrer"><img src="assets/5_8_b56ed24e-7d30-4c48-b2c8-391a2877a815.webp" alt="GIVA bracelets festive collection"><div class="category-copy"><h3>Bracelets</h3><span>Explore →</span></div></a>
-          <a class="category-card" href="https://www.giva.co/collections/silver-necklaces" target="_blank" rel="noreferrer"><img src="assets/3_15_379e11fd-5c03-42fc-8959-2c6a1a626709.webp" alt="GIVA necklaces festive collection"><div class="category-copy"><h3>Necklaces</h3><span>Explore →</span></div></a>
-          <a class="category-card" href="https://www.giva.co/collections/anklets" target="_blank" rel="noreferrer"><img src="assets/9_1_fd6ae897-88c9-4569-bf01-c674ef8943af.webp" alt="GIVA anklets festive collection"><div class="category-copy"><h3>Anklets</h3><span>Explore →</span></div></a>
-          <a class="category-card" href="https://www.giva.co/collections/mens-jewellery" target="_blank" rel="noreferrer"><img src="assets/6_1_a226547f-4089-457e-a3bd-839f6870fdb8.webp" alt="GIVA men's chains festive collection"><div class="category-copy"><h3>Men's Chains</h3><span>Explore →</span></div></a>
-          <a class="category-card" href="https://www.giva.co/collections/mens-rings" target="_blank" rel="noreferrer"><img src="assets/8_2_0563fefd-dcf9-43f2-aa97-77aa153d8387.webp" alt="GIVA men's rings festive collection"><div class="category-copy"><h3>Men's Rings</h3><span>Explore →</span></div></a>
-          <a class="category-card" href="https://www.giva.co/collections/toe-rings" target="_blank" rel="noreferrer"><img src="assets/10_1_c81d7ed4-c7ff-40ff-89fd-f80485f5fb76.webp" alt="GIVA toe rings festive collection"><div class="category-copy"><h3>Toe Rings</h3><span>Explore →</span></div></a>
+        <div class="section-heading centered reveal"><span>THE FESTIVE EDIT</span><h2>Shop Diwali & Dhanteras</h2><p>Real GIVA jewellery, presented as clean product-first festive discovery.</p></div>
+        <div class="category-mosaic festival-product-grid reveal">
+          <a class="category-card festival-product-card" href="https://www.giva.co/collections/silver-earrings" target="_blank" rel="noreferrer">
+            <div class="festival-product-media"><img src="assets/festival-earrings.webp" alt="Silver Zircon Drizzle Drop Earrings"></div>
+            <div class="category-copy"><small>Festive sparkle</small><h3>Silver Zircon Drizzle Drop Earrings</h3><span>Shop earrings →</span></div>
+          </a>
+          <a class="category-card festival-product-card" href="https://www.giva.co/collections/silver-necklaces" target="_blank" rel="noreferrer">
+            <div class="festival-product-media"><img src="assets/festival-zircon-pendant.webp" alt="Silver Zircon Pendant with Link Chain"></div>
+            <div class="category-copy"><small>Gift-ready favourite</small><h3>Silver Zircon Pendant with Link Chain</h3><span>Shop pendants →</span></div>
+          </a>
+          <a class="category-card festival-product-card" href="https://www.giva.co/collections/silver-necklaces" target="_blank" rel="noreferrer">
+            <div class="festival-product-media"><img src="assets/festival-dew-pendant.webp" alt="Silver Falling Dew Pendant with Link Chain"></div>
+            <div class="category-copy"><small>Diwali edit</small><h3>Silver Falling Dew Pendant with Link Chain</h3><span>Shop pendants →</span></div>
+          </a>
+          <a class="category-card festival-product-card" href="https://www.giva.co/collections/silver-earrings" target="_blank" rel="noreferrer">
+            <div class="festival-product-media"><img src="assets/festival-golden-earrings.webp" alt="Golden Butterfly Tiny Studded Affair Earrings"></div>
+            <div class="category-copy"><small>Golden glow</small><h3>Golden Butterfly Tiny Studded Affair Earrings</h3><span>Shop earrings →</span></div>
+          </a>
         </div>
       </div>
     </section>

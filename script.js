@@ -133,3 +133,69 @@
     }
   }
 })();
+
+
+// Smooth, silent hero playback and cursor firecracker tracer.
+(() => {
+  const video = document.getElementById('heroVideo');
+  if (video) {
+    video.muted = true;
+    video.defaultMuted = true;
+    video.volume = 0;
+    const start = () => video.play().catch(() => {});
+    if (video.readyState >= 2) start();
+    else video.addEventListener('canplay', start, { once: true });
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) start();
+    });
+  }
+
+  if (!window.matchMedia('(pointer:fine)').matches || window.matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+  const canvas = document.createElement('canvas');
+  canvas.className = 'cursor-firework-canvas';
+  canvas.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(canvas);
+  const ctx = canvas.getContext('2d');
+  let dpr = 1;
+  let particles = [];
+  let lastSpawn = 0;
+  const resize = () => {
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    canvas.width = Math.round(innerWidth * dpr);
+    canvas.height = Math.round(innerHeight * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  };
+  const spark = (x, y) => {
+    for (let i = 0; i < 5; i++) {
+      const angle = Math.random() * Math.PI * 2;
+      const speed = .7 + Math.random() * 2.1;
+      particles.push({x, y, vx: Math.cos(angle) * speed, vy: Math.sin(angle) * speed, life: 1, size: 1 + Math.random() * 2, color: Math.random() > .35 ? '#ffd66d' : '#e9718b'});
+    }
+  };
+  window.addEventListener('pointermove', event => {
+    const now = performance.now();
+    if (now - lastSpawn < 22) return;
+    lastSpawn = now;
+    spark(event.clientX, event.clientY);
+  }, { passive: true });
+  const draw = () => {
+    ctx.clearRect(0, 0, innerWidth, innerHeight);
+    particles.forEach(p => {
+      p.x += p.vx; p.y += p.vy; p.vy += .035; p.life -= .035;
+      ctx.globalAlpha = Math.max(0, p.life);
+      ctx.fillStyle = p.color;
+      ctx.shadowColor = p.color;
+      ctx.shadowBlur = 8;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fill();
+    });
+    particles = particles.filter(p => p.life > 0);
+    ctx.globalAlpha = 1;
+    ctx.shadowBlur = 0;
+    requestAnimationFrame(draw);
+  };
+  resize();
+  addEventListener('resize', resize, { passive: true });
+  requestAnimationFrame(draw);
+})();
