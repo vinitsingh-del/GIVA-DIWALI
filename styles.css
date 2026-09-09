@@ -529,3 +529,78 @@ main > .promise-bar ~ section{margin-top:0}
   .promise-grid>div{min-height:54px;padding:9px 10px}
   .section-heading.centered{margin-bottom:20px}
 }
+
+/* Requested product-card refinement pass. */
+.hero-title-card{padding-right:53px}
+.hero-title-diya{right:15px;top:50%;width:33px;height:19px;transform:translateY(-50%)}
+.hero-title-diya i{bottom:13px;width:10px;height:21px}
+.hero-title-diya b{bottom:13px}
+
+.pooja-feature-board{padding:11px;gap:11px}
+.pooja-feature-hero{min-height:288px}
+.pooja-product-card{min-height:140px}
+.pooja-product-art{min-height:88px}
+
+.festival-edit .section-heading.centered{margin-bottom:24px}
+.festival-product-grid{gap:12px}
+.festival-product-card{min-height:344px}
+.festival-product-media{inset:13px 13px 82px}
+.festival-product-card .category-copy{bottom:14px}
+
+.gold-edit{padding-block:34px}
+.gold-inner{display:block;min-height:0}
+.gold-copy{max-width:780px}
+.gold-copy p{margin:12px 0 17px}
+.gold-products-block{position:relative;margin-top:22px}
+.gold-products-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:10px;color:#ffe09a}
+.gold-products-head span{font-size:10px;font-weight:900;letter-spacing:.2em}
+.gold-products-head small{font-size:11px;color:#f9dfc9}
+.gold-product-rail{display:flex;gap:11px;overflow-x:auto;padding:2px 2px 10px;scroll-snap-type:x proximity;scrollbar-width:none}
+.gold-product-rail::-webkit-scrollbar{display:none}
+.gold-product-card{flex:0 0 clamp(176px,18vw,226px);overflow:hidden;border:1px solid rgba(255,224,144,.46);border-radius:16px;background:#65053b;box-shadow:0 12px 24px rgba(43,0,27,.2);scroll-snap-align:start;transition:transform .25s ease,box-shadow .25s ease}
+.gold-product-card:hover{transform:translateY(-4px);box-shadow:0 17px 30px rgba(35,0,24,.32)}
+.gold-product-visual{display:grid;place-items:center;height:174px;background:linear-gradient(145deg,#940b58,#4b062f);overflow:hidden}
+.gold-product-visual img{width:100%;height:100%;padding:8px;object-fit:contain;transition:transform .45s ease,filter .45s ease}
+.gold-product-card:hover .gold-product-visual img{transform:scale(1.045);filter:brightness(1.08)}
+.gold-product-meta{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;padding:11px 12px 13px;background:linear-gradient(180deg,#69053d,#4d052f);color:#fff}
+.gold-product-meta strong{max-width:125px;font-family:Georgia,serif;font-size:14px;font-weight:400;line-height:1.05}
+.gold-product-meta b{white-space:nowrap;color:#ffd984;font-size:11px;font-weight:900}
+
+.gifted-grid{gap:12px}
+.gifted-card{border-color:rgba(127,5,92,.17);box-shadow:0 10px 26px rgba(60,32,25,.06)}
+.gifted-media--product{height:244px;background:#4b062f;isolation:isolate}
+.gifted-media--product::before{content:"";position:absolute;inset:0;z-index:0;background:radial-gradient(circle at 50% 50%,rgba(244,123,171,.24),transparent 44%),radial-gradient(circle at 18% 18%,rgba(255,220,139,.36) 0 1px,transparent 2px) 0 0/30px 30px;animation:giftedGlow 5.5s ease-in-out infinite alternate}
+.gifted-media--product img{position:relative;z-index:1;object-fit:contain;padding:0;animation:giftedFloat 5s ease-in-out infinite}
+.gifted-card:nth-child(2) .gifted-media--product img{animation-delay:-1.3s}
+.gifted-card:nth-child(3) .gifted-media--product img{animation-delay:-2.4s}
+.gifted-card:nth-child(4) .gifted-media--product img{animation-delay:-3.5s}
+.gifted-info{padding:13px 14px 15px}
+@keyframes giftedFloat{50%{transform:translateY(-4px) scale(1.018)}}
+@keyframes giftedGlow{to{opacity:.7;transform:scale(1.08)}}
+
+@media(max-width:820px){
+  .hero-title-card{padding-right:35px}
+  .hero-title-diya{right:10px;width:27px;height:15.5px}
+  .hero-title-diya i{bottom:11px;width:8px;height:18px}.hero-title-diya b{bottom:11px}
+  .pooja-feature-board{padding:6px;gap:6px}
+  .pooja-feature-hero{min-height:228px}
+  .pooja-feature-products{gap:6px}
+  .pooja-product-card{grid-template-rows:74px auto;min-height:145px}
+  .pooja-product-art{min-height:74px}
+  .festival-product-card{min-height:352px}
+  .festival-product-media{inset:11px 11px 76px}
+  .gold-edit{padding-block:28px}
+  .gold-copy p{margin:10px 0 15px}
+  .gold-products-block{margin-top:18px}
+  .gold-product-rail{margin-inline:calc(var(--gutter)*-1);padding-inline:var(--gutter)}
+  .gold-product-card{flex-basis:174px}
+  .gold-product-visual{height:152px}
+  .gold-product-meta{padding:9px 10px 11px}.gold-product-meta strong{font-size:13px}.gold-product-meta b{font-size:10px}
+  .gifted-media--product{height:224px}
+}
+
+@media(max-width:520px){
+  .hero-title-card{padding-right:32px}
+  .hero-title-diya{right:9px;width:26px;height:15px}
+  .gifted-media--product{height:208px}
+}
