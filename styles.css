@@ -272,3 +272,52 @@ footer{background:#fff;padding:58px 0 20px;border-top:1px solid var(--line)}.foo
 .collection-showcase-track{display:flex;gap:32px;overflow-x:auto;padding:0 0 25px;scroll-snap-type:x mandatory;scrollbar-width:none}.collection-showcase-track::-webkit-scrollbar{display:none}.collection-showcase-card{position:relative;flex:0 0 min(47vw,610px);min-width:0;padding-bottom:88px;scroll-snap-align:start}.collection-banner{position:relative;display:block;height:330px;border-radius:30px;overflow:hidden;background:#3c1028}.collection-banner-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.96}.collection-banner::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(26,2,15,.23),transparent 42%,rgba(0,0,0,.08))}.collection-stage-product{position:absolute;z-index:1;left:9%;top:8%;width:44%;height:70%;object-fit:contain;filter:drop-shadow(0 18px 20px rgba(0,0,0,.36))}.collection-banner span{position:absolute;z-index:2;right:8%;top:50%;width:40%;color:#fff;text-align:center;transform:translateY(-50%)}.collection-banner small{display:block;color:#f7dda6;font-size:10px;font-weight:900;letter-spacing:.18em}.collection-banner strong{display:block;margin-top:9px;font-family:Georgia,serif;font-size:clamp(33px,3vw,52px);font-weight:400;line-height:.9;letter-spacing:-.055em}.collection-green span{left:7%;right:auto}.collection-green .collection-stage-product{left:auto;right:8%}
 .collection-product-row{position:absolute;z-index:3;right:7%;bottom:0;left:7%;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.collection-product-row a{height:150px;display:grid;place-items:center;overflow:hidden;border-radius:18px;background:#fff;box-shadow:0 9px 18px rgba(34,20,26,.12);transition:transform .22s}.collection-product-row a:hover{transform:translateY(-4px)}.collection-product-row img{width:86%;height:82%;object-fit:contain}
 @media(max-width:820px){.collection-showcase{padding-bottom:55px}.collection-lights{height:22px}.collection-lights i{width:7px;height:10px;margin-top:4px}.collection-showcase-shell{padding-top:35px}.collection-showcase-head{justify-content:space-between;margin-bottom:22px}.collection-showcase-head h2{font-size:35px}.collection-view-more{position:static;padding:9px 15px;font-size:11px}.collection-showcase-track{gap:16px;margin-inline:calc(var(--gutter)*-1);padding-inline:var(--gutter);padding-bottom:19px}.collection-showcase-card{flex-basis:82vw;padding-bottom:69px}.collection-banner{height:246px;border-radius:22px}.collection-banner strong{font-size:31px}.collection-product-row{gap:8px;right:6%;left:6%}.collection-product-row a{height:112px;border-radius:13px}}
+
+/* Pooja marker, title-lockup and Festive Fun refinement */
+.pooja-hotspot{width:13px;height:13px;border-width:1.5px;box-shadow:0 0 0 3px rgba(255,247,219,.5),0 5px 12px rgba(82,0,53,.42);animation:poojaHotspotSmall 1.8s ease-in-out infinite}
+.pooja-hotspot::after{font-size:9px;line-height:1}
+.hs-pendant{left:75%;top:45%}.hs-earrings{left:85%;top:27%}
+.hs-necklace{left:68%;top:34%}.hs-bracelet{left:45%;top:65%}
+.hs-necklace-two{left:31%;top:38%}.hs-earrings-two{left:78%;top:29%}
+@keyframes poojaHotspotSmall{0%,100%{box-shadow:0 0 0 3px rgba(255,247,219,.5),0 5px 12px rgba(82,0,53,.42);transform:translate(-50%,-50%) scale(1)}50%{box-shadow:0 0 0 6px rgba(255,214,111,.18),0 5px 14px rgba(82,0,53,.45);transform:translate(-50%,-50%) scale(1.07)}}
+.hero-title-lockup{left:50%;right:auto;bottom:clamp(25px,4vw,54px);width:min(620px,calc(100% - 48px));transform:translateX(-50%);display:block}
+.hero-title-card{width:100%;max-width:none}
+.hero-title-card h1{min-height:142px;width:100%;padding:21px 128px 21px 40px;justify-content:center;align-items:flex-start;border-radius:38px}
+.hero-title-giva{font-size:18px;letter-spacing:.29em;line-height:1.25}
+.hero-title-separator{display:none}
+.hero-title-diwali{margin-top:3px;font-size:clamp(55px,5.2vw,82px);line-height:.88}
+.hero-title-diya{right:43px;top:50%;transform:translateY(-50%);z-index:4}
+.hero-title-card::before{inset:11px;border-radius:30px}
+.hero-title-card::after{right:25px;top:24px;width:77px;height:77px}
+.diwali-play{min-height:464px}
+.diwali-play-shell{gap:clamp(38px,6vw,88px)}
+.diwali-play-copy h2{font-size:clamp(34px,4.2vw,58px)}
+.diwali-play-actions{gap:16px}
+.diwali-play-card{min-height:202px;padding:19px;border-radius:20px;overflow:hidden}
+.diwali-play-card::before{background:linear-gradient(105deg,rgba(39,3,27,.96) 0%,rgba(86,3,55,.82) 54%,rgba(88,14,34,.18) 100%)}
+.diwali-play-art{position:absolute!important;z-index:0;right:-2%;bottom:-42%;width:58%;height:142%;object-fit:cover;object-position:center 44%;opacity:.95;filter:saturate(1.04) contrast(1.02)}
+.mithai-card .diwali-play-art{right:-1%;bottom:-28%;width:60%;height:136%;object-position:center 58%}
+.diwali-play-card span,.diwali-play-card strong,.diwali-play-card small{position:relative;z-index:1}
+.diwali-play-card strong{margin-top:49px;max-width:56%;font-size:22px;line-height:1.03}
+.diwali-play-card small{margin-top:12px}
+@media(max-width:820px){
+ .hero-title-lockup{bottom:22px;width:min(380px,calc(100% - 34px))}
+ .hero-title-card h1{min-height:110px;padding:18px 94px 16px 28px;border-radius:30px}
+ .hero-title-giva{font-size:13px}
+ .hero-title-diwali{font-size:clamp(41px,11.5vw,54px)}
+ .hero-title-diya{right:29px}
+ .hero-title-card::before{inset:8px;border-radius:24px}
+ .hero-title-card::after{right:14px;top:17px;width:61px;height:61px}
+ .promise-grid>div{flex-basis:50.4vw;min-height:67px;padding:12px}
+ .promise-icon{width:28px;height:28px}
+ .promise-grid b{font-size:9px}.promise-grid small{font-size:7.7px}
+ .diwali-play{min-height:488px}
+ .diwali-play-shell{gap:28px}
+ .diwali-play-copy h2{font-size:33px}
+ .diwali-play-actions{gap:12px}
+ .diwali-play-card{min-height:176px;padding:16px;border-radius:17px}
+ .diwali-play-card strong{margin-top:41px;font-size:18px;max-width:59%}
+ .diwali-play-card small{margin-top:10px;font-size:11px}
+ .diwali-play-art{width:60%;height:146%;bottom:-49%;right:-4%}
+ .mithai-card .diwali-play-art{width:62%;height:142%;bottom:-35%}
+}
