@@ -676,3 +676,49 @@ main > .promise-bar ~ section{margin-top:0}
     height:136px!important;
   }
 }
+
+/* Pooja Essentials: requested 20% proportional size reduction. */
+.pooja-feature{padding-block:clamp(21px,2.56vw,35px)}
+.pooja-feature-shell{width:80%;max-width:976px}
+.pooja-feature-heading{max-width:520px;margin-bottom:16px}
+.pooja-feature-heading>span{font-size:8px}
+.pooja-feature-heading h2{margin-top:7px;font-size:clamp(25px,2.8vw,41px)}
+.pooja-feature-heading p{max-width:448px;margin-top:10px;font-size:11.2px}
+.pooja-feature-board{gap:9px;padding:9px;border-radius:22px}
+.pooja-feature-hero{min-height:230px;border-radius:16px}
+.pooja-feature-hero-copy{left:22px;right:19px;bottom:20px}
+.pooja-feature-hero-copy small{font-size:8px}
+.pooja-feature-hero-copy strong{max-width:264px;margin-top:6px;font-size:clamp(22px,2.48vw,38px)}
+.pooja-feature-hero-copy b{margin-top:12px;font-size:10px}
+.pooja-feature-products{gap:8px}
+.pooja-product-card{min-height:112px;border-radius:13px}
+.pooja-product-art{min-height:70px}
+.pooja-product-copy{padding:7px 8px 9px}
+.pooja-product-copy small{font-size:6.4px}
+.pooja-product-copy strong{font-size:clamp(13px,1.16vw,18px)}
+.pooja-product-copy b{margin-top:6px;font-size:8px}
+.pooja-product-art img[alt*="coin"],
+.pooja-product-art img[alt*="Coin"],
+.pooja-product-art img[alt*="idol"]{width:calc(100% - 12px)!important;height:calc(100% - 12px)!important}
+
+@media(max-width:820px){
+  .pooja-feature{padding-block:19px}
+  .pooja-feature-shell{width:80%}
+  .pooja-feature-heading{margin-bottom:13px;padding-inline:10px}
+  .pooja-feature-heading h2{font-size:26px}
+  .pooja-feature-heading p{font-size:10.4px}
+  .pooja-feature-board{gap:5px;padding:5px;border-radius:16px}
+  .pooja-feature-hero{min-height:182px;border-radius:13px}
+  .pooja-feature-hero-copy{left:16px;bottom:16px}
+  .pooja-feature-hero-copy strong{font-size:26px}
+  .pooja-feature-products{gap:5px}
+  .pooja-product-card{grid-template-rows:59px auto;min-height:116px;border-radius:11px}
+  .pooja-product-art{min-height:59px}
+  .pooja-product-copy{padding:6px 6px 8px}
+  .pooja-product-copy small{font-size:5.2px}
+  .pooja-product-copy strong{font-size:12px}
+  .pooja-product-copy b{margin-top:6px;font-size:7px}
+  .pooja-product-art img[alt*="coin"],
+  .pooja-product-art img[alt*="Coin"],
+  .pooja-product-art img[alt*="idol"]{width:calc(100% - 8px)!important;height:calc(100% - 8px)!important}
+}
