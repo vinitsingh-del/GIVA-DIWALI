@@ -705,7 +705,7 @@ main > .promise-bar ~ section{margin-top:0}
   .pooja-feature-board{height:340px}
   .pooja-feature-hero{align-self:center;height:230px}
   .pooja-feature-products{height:100%;min-height:0}
-  .pooja-product-card{min-height:0}
+  .pooja-product-card{min-height:0;grid-template-rows:minmax(0,1fr) auto}
   .pooja-product-art{min-height:0}
 }
 
