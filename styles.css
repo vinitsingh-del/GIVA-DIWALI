@@ -730,3 +730,9 @@ main > .promise-bar ~ section{margin-top:0}
   .pooja-product-art img[alt*="Coin"],
   .pooja-product-art img[alt*="idol"]{width:calc(100% - 8px)!important;height:calc(100% - 8px)!important}
 }
+
+/* Trust badges: reduce mobile card height ~30% (was rendering at 112px because .promise-grid's own min-height:112px was never overridden for mobile, and its children stretch to fill it - all earlier div-level min-height tweaks had no visible effect on real height). Container min-height is removed so the cards size to content, and padding is tuned so the card lands at ~78px, ~30% shorter than the 112px it was rendering at. */
+@media(max-width:820px){
+  .promise-grid{min-height:0}
+  .promise-grid>div{align-items:center;padding:26px 10px;min-height:0}
+}
